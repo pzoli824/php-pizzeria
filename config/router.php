@@ -29,7 +29,7 @@ class Router {
 				'drinks' => 'pages/admin/drinks.php',
 				'orders' => 'pages/admin/orders.php',
 				'sauces' => 'pages/admin/sauces.php',
-				'pasta' => 'pages/admin/pasta.php',
+				'dough' => 'pages/admin/dough.php',
 				'toppings' => 'pages/admin/toppings.php',
                 '' => 'pages/admin/home.php'
             ];
@@ -93,9 +93,9 @@ class Router {
 					<li><a href='index.php?page=drinks'>Drinks</a></li>
 					<li><a href='index.php?page=orders'>Orders</a></li>
 					<li><a href='index.php?page=sauces'>Sauces</a></li>
-        	<li><a href='index.php?page=pasta'>Pastas</a></li>
+        	<li><a href='index.php?page=dough'>Doughs</a></li>
           <li><a href='index.php?page=toppings'>Toppings</a></li>
-          <li style='float: right'><a href='index.php?page=logout'>Logoutt</a></li>
+          <li style='float: right'><a href='index.php?page=logout'>Logout</a></li>
           <li style='float: right'><a href='index.php?page=profile'>".$_SESSION['name']."</a></li>
         </ul>";
     }
