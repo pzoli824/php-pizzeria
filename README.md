@@ -34,11 +34,11 @@ The tools used to build this project was:
 
 ## Screenshot
 
-![image about application](https://https://github.com/pzoli824/php-pizzeria/blob/main/images/php_pizzeria_1.jpg?raw=true)
+![image about application](https://github.com/pzoli824/php-pizzeria/blob/main/images/php_pizzeria_1.jpg)
 
-![image about application](https://https://github.com/pzoli824/php-pizzeria/blob/main/images/php_pizzeria_2.jpg?raw=true)
+![image about application](https://github.com/pzoli824/php-pizzeria/blob/main/images/php_pizzeria_2.jpg)
 
-![image about application](https://https://github.com/pzoli824/php-pizzeria/blob/main/images/pizzeria_erd.jpg?raw=true)
+![image about application](https://github.com/pzoli824/php-pizzeria/blob/main/images/pizzeria_erd.jpg)
 
 ## Getting Started
 
