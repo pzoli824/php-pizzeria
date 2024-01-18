@@ -16,7 +16,7 @@ $router = new Router();
 
 <body>
 
-<?php if(isset($_SESSION['user_id'])) {?>
+<?php if(isset($_SESSION['person_id'])) {?>
 <div class="navbar">
 <?php 
 if($_SESSION['account_type'] === 0) $router->renderCustomerMenus(); 

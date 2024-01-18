@@ -129,7 +129,7 @@ class AuthService extends Database {
     $stmt = $conn->prepare("SELECT * FROM person WHERE email = :email AND password = :password");
     $stmt->bindParam(':email', $email, PDO::PARAM_STR);
     $stmt->bindParam(':password', $password, PDO::PARAM_STR);
-    $stmt->setFetchMode(PDO::FETCH_CLASS, 'User');
+    $stmt->setFetchMode(PDO::FETCH_CLASS, 'Person');
     $stmt->execute();
     $person = $stmt->fetch();
     $this->closeConnection();
