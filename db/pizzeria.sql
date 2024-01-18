@@ -60,8 +60,8 @@ CREATE TABLE Pizzas (
     name VARCHAR(200) NOT NULL,
     dough_id INT NOT NULL,
     sauce_id INT,
-    FOREIGN KEY (dough_id) REFERENCES Dough(id),
-    FOREIGN KEY (sauce_id) REFERENCES Sauce(id)
+    FOREIGN KEY (dough_id) REFERENCES Dough(id) ON DELETE CASCADE,
+    FOREIGN KEY (sauce_id) REFERENCES Sauce(id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
 CREATE TABLE Toppings (
@@ -89,7 +89,7 @@ CREATE TABLE Ordered_Drinks (
     quantity INT NOT NULL,
     PRIMARY KEY(customer_id, order_date, drink_id),
     FOREIGN KEY (customer_id, order_date) REFERENCES Orders(customer_id, order_date) ON DELETE CASCADE,
-    FOREIGN KEY (drink_id) REFERENCES Drink(id)
+    FOREIGN KEY (drink_id) REFERENCES Drink(id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
 /* Inserting data into tables */

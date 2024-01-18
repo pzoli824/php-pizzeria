@@ -52,7 +52,7 @@ class OrderService extends Database {
         ));
         else if($item->drink_id !== null)
         $conn
-        ->prepare("INSERT INTO rendelt_italok (customer_id, order_date, drink_id, quantity) VALUES (:customer_id, :order_date, :drink_id, :quantity)")
+        ->prepare("INSERT INTO ordered_drinks (customer_id, order_date, drink_id, quantity) VALUES (:customer_id, :order_date, :drink_id, :quantity)")
         ->execute(array(
           ':customer_id' => $customerId,
           ':order_date' => $date,
@@ -98,7 +98,7 @@ class OrderService extends Database {
         $pizza = $pizzaService->getByIdWithCost($id);
         $order->price += (int)$pizza->price*$quantity;
       }
-      foreach ($order->italok as $id => $quantity) {
+      foreach ($order->drinks as $id => $quantity) {
         $drink = $drinkService->getByIdWithCost($id);
         $order->price += (int)$drink->price*$quantity;
       }

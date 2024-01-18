@@ -19,7 +19,7 @@ if(isset($_GET['edit']) && !isset($_GET['remove'])) {
   $customerService->renderEdit($c);
 }
 if(isset($_POST['createCustomerAndUser'])) {
-  $c = new CustomerWithUser();
+  $c = new CustomerWithPerson();
   $c->email = $_POST['email'];
   $c->lastname = $_POST['lastname'];
   $c->firstname = $_POST['firstname'];
@@ -29,8 +29,8 @@ if(isset($_POST['createCustomerAndUser'])) {
   Router::navigateByPage('self');
 }
 if(isset($_POST['editCustomerAndUser'])) {
-  $newCustomer = new CustomerWithUser();
-  $newCustomer->ugyfel_id = $_GET['edit'];
+  $newCustomer = new CustomerWithPerson();
+  $newCustomer->customer_id = $_GET['edit'];
   $newCustomer->email = $_POST['email'];
   $newCustomer->lastname = $_POST['lastname'];
   $newCustomer->firstname = $_POST['firstname'];
@@ -57,7 +57,7 @@ if(isset($_POST['editCustomerAndUser'])) {
   foreach ($customers as $key => $customer) {
   echo "
   <tr>
-  <td>".$customer->id."</td>
+  <td>".$customer->customer_id."</td>
   <td>".$customer->person_id."</td>
   <td>".$customer->email."</td>
   <td>".$customer->lastname."</td>
@@ -66,8 +66,8 @@ if(isset($_POST['editCustomerAndUser'])) {
   <td>".$customerService->getAccountTypeAsText($customer->type)."</td>
   <td>".$customer->balance."</td>
   <td>
-  <a class='red-text' href='index.php?page=customers&remove=".$customer->id."'>Delete</a>,
-  <a class='green-yellow-text' href='index.php?page=customers&edit=".$customer->id."'>Edit</a>
+  <a class='red-text' href='index.php?page=customers&remove=".$customer->customer_id."'>Delete</a>,
+  <a class='green-yellow-text' href='index.php?page=customers&edit=".$customer->customer_id."'>Edit</a>
   </td>
   </tr>";
   }

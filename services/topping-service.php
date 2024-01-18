@@ -36,7 +36,7 @@ class ToppingService extends Database implements CrudOperations {
   public function delete($id) {
     $conn = $this->getConnection();
     $stmt = $conn->prepare("DELETE FROM topping WHERE id = :topping_id");
-    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->bindParam(':topping_id', $id, PDO::PARAM_INT);
     $stmt->execute();
     $this->closeConnection();
   }

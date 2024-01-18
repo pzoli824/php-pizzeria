@@ -1,6 +1,6 @@
 <?php 
 
-class PastaService extends Database implements CrudOperations {
+class DoughService extends Database implements CrudOperations {
 
   public function __construct() {}
 

@@ -35,7 +35,7 @@ if(isset($_POST['createPizza'])) {
   $p->sauce_id = $_POST['sauce_id'];
   $checkboxes = isset($_POST['checkboxes']) ? $_POST['checkboxes'] : [];
   foreach ($_POST['checkboxes'] as $key => $check) {
-    $p->addFeltetId($check);
+    $p->addToppingId($check);
   }
   $pizzaService->create($p);
   Router::navigateByPage('pizzas');
@@ -55,8 +55,8 @@ if(isset($_POST['createPizza'])) {
   <td><p class='white-text'>".$pizza->name."</p></td>
   <td>".$pizza->price."</td>
   <td>
-  <a class='red-text' href='index.php?page=pizzas&remove=".$pizza->id."'>Delete</a>,
-  <a class='green-yellow-text' href='index.php?page=pizzas&edit=".$pizza->id."'>Edit</a>
+  <a class='red-text' href='index.php?page=pizzas&remove=".$pizza->pizza_id."'>Delete</a>,
+  <a class='green-yellow-text' href='index.php?page=pizzas&edit=".$pizza->pizza_id."'>Edit</a>
   </td>
   </tr>";
   }

@@ -3,7 +3,7 @@ $pizzaService = new PizzaService();
 
 if(isset($_POST['editPizza'])) {
   $p = new CreatePizza();
-  $p->id = $_GET['edit'];
+  $p->pizza_id = $_GET['edit'];
   $p->name = $_POST['name'];
   $p->dough_id = $_POST['dough_id'];
   $p->sauce_id = $_POST['sauce_id'];

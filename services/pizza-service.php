@@ -141,8 +141,8 @@ class PizzaService extends Database implements CrudOperations {
     foreach ($pizzaDtos as $key => $value) {
       $little_arr = [
         'name' => $value->name, 
-        'price' => $value->ar, 
-        'pizza_id' => $value->id];
+        'price' => $value->price, 
+        'pizza_id' => $value->pizza_id];
       array_push($arr, $little_arr);
     }
     return $arr;
@@ -159,7 +159,7 @@ class PizzaService extends Database implements CrudOperations {
       $sauce = new Sauce();
       $sauce->setId($pizza->sauce_id)->setName($pizza->sauce_name)->setPrice($pizza->sauce_price);
       $dough = new Dough();
-      $pasta->setId($pizza->dough_id)->setName($pizza->dough_name)->setPrice($pizza->dough_price);
+      $dough->setId($pizza->dough_id)->setName($pizza->dough_name)->setPrice($pizza->dough_price);
       $newPizza = new PizzaWithToppings();
       $newPizza->setId($pizza->pizza_id)->setName($pizza->name)->setSauce($sauce)->setDough($dough)->addTopping($topping);
       $pizzasWithToppings[$pizza->pizza_id] = $newPizza;

@@ -72,7 +72,7 @@ class CustomerService extends Database implements CrudOperations {
   }
   public function delete($id) {
     $conn = $this->getConnection();
-    $stmt = $conn->prepare("DELETE FROM customer WHERE customer_id = :customer_id");
+    $stmt = $conn->prepare("DELETE FROM customer WHERE id = :customer_id");
     $stmt->bindParam(':customer_id', $id, PDO::PARAM_INT);
     $stmt->execute();
     $this->closeConnection();
