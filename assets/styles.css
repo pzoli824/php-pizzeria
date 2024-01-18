@@ -1,0 +1,268 @@
+body {
+    font-size: large;
+    width: initial;
+    height: initial;
+    margin: 0;
+    background-color: #333;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    width: 80%;
+    height: 8%;
+    position: relative;
+    top: 0;
+    left: 10%;
+}
+
+.navbar ul {
+    width: 100%;
+    font-size: 1.5vw;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    z-index: 1;
+    box-shadow: 0px 0px 10px 1px black;
+}
+
+.navbar ul li {
+    color: #333;
+    float: left;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: #f29c00;
+    text-decoration: underline;
+}
+
+.navbar ul li a:active {
+    color: #f29c00;
+    text-decoration: underline;
+}
+
+.content {
+    width: 80%;
+    min-height: 80%;
+    margin: auto;
+    position: relative;
+    background-color: #1f1f1f;
+    color: white;
+    box-shadow: 3px 3px 10px 0.5px black;
+    padding-top: 2%;
+}
+
+label {
+    color: black;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.black-text {
+    color:black;
+}
+.green-text {
+    color: green;
+}
+.red-text {
+    color: red;
+}
+.white-text {
+    color: white;
+}
+.green-yellow-text {
+    color: greenyellow;
+}
+.orange-text {
+    color: #f29c00;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+.width-20 {
+    width: 20% !important;
+}
+.checkbox-wrapper {
+    height: 300px;
+    padding: 5px;
+    overflow: auto;
+    display: block;
+    text-align: start;
+    background-color: #141414;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.checkbox-wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.checkbox-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.checkbox-wrapper::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.checkbox-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.custom-table {
+    min-width: 80%;
+    border: 1px solid #141414;
+    overflow-y: auto;
+}
+.custom-table td {
+    text-align: center;
+}
+.custom-table th {
+    background-color: #141414;
+    color:#f29c00;
+}
+.custom-table td a {
+    text-decoration: none;
+    font-weight: bold;
+}
+.custom-table td a:hover {
+    color: #f29c00;
+}
+.custom-table tr:nth-child(even) {
+    background-color: #2c2c2c;
+}
+
+.content-card {
+    background-color: #1a1a1a;
+    box-shadow: 2px 3px 2px black;
+    padding: 10px;
+    margin: 10px;
+    width: 95%;
+    height: auto;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.inline-flex-row {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.cart-actions * {
+    margin-right: 10px;
+}
+
+.profile-forms {
+    width: inherit;
+}
+.profile-forms input{
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 2px 3px 2px lightgray;
+    padding: 10px;
+    margin: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.index-card {
+    width: auto;
+    height: -webkit-fill-available;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.index-choose-buyer {
+    width: 30%;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.index-create-buyer {
+    width: 30%;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.dropdown-select {
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-width: 20%;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.dropdown-option {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.dropdown-option:hover {
+    background-color: aliceblue;
+}
+.input {
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 50%;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.input:hover {
+    background-color: aliceblue;
+}
+.button {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.button:hover {
+    background-color: aquamarine;
+    font-weight: bold;
+    cursor: pointer;
+}
